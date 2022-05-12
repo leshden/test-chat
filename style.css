@@ -9,35 +9,128 @@
   --user-list-width: 200px;
 }
 
+@font-face {
+  font-family: Macondo;
+  src: url(assets/Macondo-Regular.ttf);
+}
+
+body {
+  font-family: Macondo;
+}
+
 .header-container {
   width: 100%;
   height: var(--header-height);
-  background-color: coral;
+  background: linear-gradient(coral, pink);
   font-size: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.header-title-container {
+  display: flex;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-size: 40px;
 }
 
 .middle-container {
   width: 100%;
   height: calc( 100vh - ( var(--header-height) + var(--footer-height) ) );
   display: flex;
-  background-color: khaki;
+  background-color: pink;
 }
 
 .user-list-container {
   width: var(--user-list-width);
   height: 100%;
-  background-color: gold;
+  background-color: pink;
+  border-right: 2px solid black;
+  overflow: auto;
+}
+
+.user-item-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.chat-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.user-name {
+  text-align: center;
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
 }
 
 .chat-container {
   height: 100%;
   width: calc( 100% - var(--user-list-width));
-  background-color: chartreuse;
+  background: white;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.chat-item-container {
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: bisque;
+}
+
+.chat-text {
+  margin: 10px;
 }
 
 .footer-container {
   width: 100%;
   height: var(--footer-height);
-  background-color: coral;
+  background: linear-gradient(pink, coral);
   font-size: 36px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text-input {
+  height: 60px;
+  resize: none;
+  margin-top: 15px;
+}
+
+.footer-button-submit {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 100px;
+  text-align: center;
 }
